@@ -1,0 +1,112 @@
+.tabs-container {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.tabs-titles {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-titles label {
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.tabs-titles input[type="radio"] {
+    display: none;
+}
+
+.tabs-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Creates a responsive grid */
+    gap: 20px;
+    /* Adjust space between items */
+    padding: 20px;
+    /* Adds some padding around the entire grid */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    /* Stack image and name vertically */
+    align-items: center;
+    /* Center-align the items */
+    text-align: center;
+    /* Ensure text is centered below the image */
+}
+
+.content img {
+    width: 100%;
+    /* Make images responsive within their container */
+    max-width: 200px;
+    /* Adjust based on your preference */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.graduate-name {
+    margin-top: 8px;
+    /* Space between image and name */
+}
+
+
+
+.tab-button.active {
+    background-color: #e0e0e0;
+    /* Slightly darker to indicate active state */
+}
+
+/* CSS */
+.tab-button {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.button-5:hover,
+.button-5:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+    transform: translateY(-1px);
+}
+
+.button-5:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}

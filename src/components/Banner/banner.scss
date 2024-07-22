@@ -1,0 +1,43 @@
+@import '../../theme/core.scss';
+
+.logoBanner {
+    background-color: $knowledge;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    height: 140px; // Adjust height as necessary
+  
+    .sapphireContainer {
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+  
+      &.left {
+        margin-right: 10vw; // Space between the left sapphire and the CSC logo
+      }
+  
+      &.right {
+        margin-left: 10vw; // Space between the right sapphire and the CSC logo
+      }
+    }
+  
+    .nav-logo {
+      width: 150px; // Size of the main logo
+    }
+  
+    .sapphire {
+    width: 300px;
+    }
+  
+    .logoLink {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
+    }
+  }
+  

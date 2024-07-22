@@ -1,0 +1,259 @@
+@import '../../theme/core.scss';
+
+nav {
+  float: right;
+  
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 15px;
+  line-height: 80px;
+  font-weight: 600;
+  background: transparent;
+  font-size: 0.95rem;
+  text-decoration: none;
+  /*
+  The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+  */
+}
+.goldText{
+  color: $unity ;
+  &:hover{
+    color:$goldcoin;
+  }
+}
+
+.whiteText{
+  color: $unity ;
+  &:hover{
+    color:$integrity;
+  }
+}
+nav ul li a:hover {
+  opacity: 1;
+  text-decoration: none;
+  font-size:1.1rem;
+  font-weight:900;
+  transition: color 0.5s, font-size 0.5s; text-decoration: 1.5s;
+}
+
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  z-index: 1;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px $yellowrose;
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $unity;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+	z-index: 4;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  background: transparent;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: $goldcoin;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+/* 
+.navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
+*/
+.navigation {
+  position: fixed; // Fixes the navbar at the top
+  top: 0; // Ensures it sticks to the very top of the page
+  width: 100%; // Ensures the navbar stretches across the full width
+  height: 70px;
+  z-index: 5;
+  background: $sapphire; // Makes the navbar background transparent
+  transition: background-color 0.5s ease;
+
+  backdrop-filter: blur(3px);
+}
+.navigationTransparent {
+  position: fixed; // Fixes the navbar at the top
+  top: 0; // Ensures it sticks to the very top of the page
+  width: 100%; // Ensures the navbar stretches across the full width
+  height: 70px;
+  z-index: 5;
+  background: transparent; // Makes the navbar background transparent
+  transition: background-color 0.5s ease;
+
+  backdrop-filter: blur(3px);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  backdrop-filter: blur(2px);
+
+}
+
+/* Existing styles for .brand */
+.brand {
+	position: absolute;
+	padding-left: 20px;
+	line-height: 70px;
+	text-transform: uppercase;
+	font-size: 0.5em;
+	float: left;
+  }
+  
+  .brand a,
+  .brand a:visited {
+	color: #463f3f;
+	text-decoration: none;
+  }
+  
+  .logo {
+	width: 125px;
+  transition: opacity 0.3s ease-in-out;
+
+  }
+
+  .csclogo{
+	width:50px;
+  }
+  
+  /* Additional media query for small viewport */
+  @media (max-width: 800px) {
+	.brand {
+	  left: auto;
+	  right: 20px; // Position the logo towards the right
+	  float: none;
+	  padding-left: 0;
+	}
+  }
+  
+  .menuItems {
+	display: block;
+	
+	@media (max-width: 800px) { 
+	  display: none;
+	  &.show {
+		display: block;
+	  }
+	}
+  }
+
+  .logo-navigation {
+	display: flex;
+	height: 70px;
+	z-index: 5;
+	justify-content: center;
+	padding: 10px 0;
+	background-color: $sapphire;
+  
+	.logo-link {
+	  margin: 0 10px;
+	  
+	  img.nav-logo {
+		width: 50px;
+		height: auto;
+	  }
+	}
+  }
+  .logo.fade {
+    opacity: 0;
+  }
+
+  .blueActive {
+    font-weight: 900;
+    text-decoration: none;
+    color: $integrity; // Replace with your desired color
+    }
+
+  .goldActive {
+    font-weight: 900;
+    text-decoration: none;
+    color: $goldcoin; // Replace with your desired color
+  }

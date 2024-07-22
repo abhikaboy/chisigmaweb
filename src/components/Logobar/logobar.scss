@@ -1,0 +1,36 @@
+@import '../../theme/core.scss';
+
+
+
+.logoAnimationBar {
+  display: flex;
+  animation: moveLogos 30s  infinite;
+  animation-timing-function: linear;
+
+}
+
+@keyframes moveLogos {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(60%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.logoItema {
+  height: 160px; /* Set a standard height for all logos */
+  object-fit: contain; /* Ensures the logos maintain their aspect ratio */
+  margin-right: 50px; /* Adjust spacing between logos as needed */
+  width: auto; /* Allows the width to adjust based on the aspect ratio */
+}
+
+.logoItemb {
+  height: 80px; /* Set a standard height for all logos */
+  object-fit: contain; /* Ensures the logos maintain their aspect ratio */
+  margin-right: 50px; /* Adjust spacing between logos as needed */
+  width: auto; /* Allows the width to adjust based on the aspect ratio */
+}

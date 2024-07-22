@@ -1,0 +1,57 @@
+/**
+ * ----------------------------------------
+ * Variables
+ * ----------------------------------------
+ */
+
+$roboto: 'Roboto';
+$open-san: 'Open Sans';
+
+@font-face {
+  font-family: AvenirBlack;
+  font-weight: normal;
+  src: url('fonts/Avenir Black.ttc') format('truetype');
+}
+
+@font-face {
+  font-family: AvenirBook;
+  font-weight: normal;
+  src: url('fonts/Avenir Book.ttc') format('truetype');
+}
+
+// replace these w actually ivypresto display thin & text italic
+// after adobe cloud sub is secured
+@font-face {
+  font-family: IvyDisplay;
+  font-weight: normal;
+  src: url('fonts/Butler/Butler_Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: IvyText;
+  font-weight: normal;
+  src: url('fonts/Butler/Butler_Medium.otf') format('opentype');
+}
+
+
+
+$AvenirBlack: AvenirBlack;
+$AvenirBook: AvenirBook;
+$IvyDisplay: IvyDisplay;
+$IvyText: IvyText;
+
+/**
+ * ----------------------------------------
+ * Exportss
+ * ----------------------------------------
+ */
+
+:export {
+  roboto: $roboto;
+  open-san: $open-san;
+  AvenirBlack: $AvenirBlack;
+  AvenirBook: $AvenirBook;
+  IvyDisplay: $IvyDisplay;
+  IvyText: $IvyText;
+}
+

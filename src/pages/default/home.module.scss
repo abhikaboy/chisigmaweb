@@ -1,0 +1,329 @@
+@import '../../theme/core.scss';
+html{
+  scroll-behavior: smooth;
+}
+.defaultPage{
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
+.content {
+    position: relative; 
+    overflow: hidden; // Contains the image within the content div
+    height: 82vh; // Adjust the height as needed
+  }
+  
+  .bannerImageContainer {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover; // Maintain aspect ratio
+    background-position: center 45%; // Adjusts the position of the image
+    transition: transform 0.3s ease;
+  
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1; // Ensures the overlay is above the image but below the text
+    }
+    .bannerText {
+      position: absolute;
+      z-index: 2; // Higher z-index to bring the text above the overlay
+      // ... rest of your styles ...
+    }
+  }
+  
+  .shadow{
+    text-shadow: 3.5px 2.5px 0px $integrity, 9px 8px 0px rgba(0,0,0,0.15);
+  }
+  .bannerText {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    color: $unity; // Use your color variable
+  }
+  h1{
+    font-size:4rem;
+    font-weight: 200;
+    margin-bottom:-20px;
+    
+    
+  }
+  h4{
+    font-size: 1.14rem;
+
+  }
+
+  .bannerImageContainer {
+    position: relative;
+    // ... existing styles ...
+  
+    &::after {
+      content: '';
+      display: block;
+      height: 300px; // Height equal to the desired extra space
+    }
+  
+    .buttonGroup {
+        position: absolute;
+        bottom: -15px; // Adjust this to position the buttons half outside the container
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px; // Adjust if needed
+      }
+  }
+  
+h2{
+    font: IvyThin;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+    color: $sapphire;
+}
+
+@keyframes text-animation {
+  0%, 25% { margin-top: 0rem; } // Display first text
+  30%, 55% { margin-top: -1.9rem; } // Display second text
+  60%, 85% { margin-top: -3.8rem; } // Display third text
+  90%, 100% { margin-top: 0; } // Transition back to first text
+}
+
+.animatedText {
+  height: 2.81rem; // Height of one line of text
+  overflow: hidden;
+  width:auto;
+  display: inline-block;
+  vertical-align: middle;
+  color: $integrity;
+}
+
+.animatedText > div {
+  
+  height: 2.81rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 7px;
+}
+
+.animatedText div:first-child {
+  animation: text-animation 9s infinite; // Adjusted to 12 seconds for the complete cycle
+}
+
+.animatedText .first div {
+
+  background-color: transparent;
+  padding-bottom: 4px;
+}
+.animatedText .second div {
+
+  background-color: transparent;
+  padding-bottom: 2px;
+  
+}
+.animatedText .third div {
+  background-color: transparent;
+  
+}
+
+.line{
+  width:25vw;
+  height: 0.1rem;
+  margin-top: 0px;
+  background-color: $unity;
+}
+
+.buttonPosition{
+  margin-top:50px;
+}
+
+
+
+.spacer {
+  height: 200px;
+  width: 100%;
+  background-size: cover; // Maintain aspect ratio
+  background-position: center 45%; // Adjusts the position of the image
+}
+
+.circleLogo {
+  background: $unity;
+  border-radius: 50%;
+  top:-150px;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:5;
+  animation: spin 2s;
+  
+}
+.logoContainer {
+  min-width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  display:flex;
+  white-space: nowrap;
+
+}
+
+.circleLogo:hover{
+  -webkit-animation: spin 5s infinite;
+  animation: spin 3s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes spin{
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+  }
+}
+
+@keyframes spin{
+  from {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  
+  to {
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+
+.textContainer {
+  position: relative;
+  height: 50px; // Adjust height as needed
+  overflow: hidden;
+  font-size: 24px; // Adjust font size as needed
+}
+
+.textAnimation {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: revealText 10s linear infinite;
+  animation-delay: calc(var(--index) * 1s); // Adjust time as needed
+}
+
+.textAnimation span {
+  white-space: nowrap;
+}
+
+@keyframes revealText {
+  0%, 11% { opacity: 0; }
+  12%, 22% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+.circleLogo img {
+  border-radius: 50%;
+  width: 150%; /* Adjusted for proper fit */
+  height: 150%;
+  object-fit: cover;
+  z-index:5;
+}
+
+.contentContainer {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+
+}
+
+.contentText {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var($sapphire);
+}
+
+.divider {
+  padding-top: 60px;
+}
+
+.gridWrapper {
+  display: grid;
+  background-color: $sapphire;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 20px; /* Space between cards */
+  padding: 10px;
+  background-size: cover; // Maintain aspect ratio
+  background-position: center 50%; // Adjusts the position of the image
+  border:5px solid $integrity;
+}
+
+.chiSigmaChapter{
+  color: $goldcoin;
+}
+
+.firstSpacer{
+  width: 100vw;
+  height: 175px;
+  background-color: $sapphire;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  img{
+    height:auto;
+    width: 125px;
+    margin: 25px;
+
+  }
+}
+
+.invisible{
+  visibility:hidden;
+}
+
+.brotherhoodText{
+  width: 100%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  h1{
+    font-family: AvenirBook;
+  }
+  color: $goldcoin;
+  font-size:3.0rem;
+  padding-top: 60px;
+
+}
+
+.brotherhoodTextSub{
+  width: 100%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  color: $sapphire;
+  h1{
+  font-size:3.5rem;
+  }
+  padding-top: 20px;
+
+}

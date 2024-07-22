@@ -1,0 +1,60 @@
+/**
+ * ----------------------------------------
+ * Variables
+ * ----------------------------------------
+ */
+
+// pink
+$pink: #ff3b86;
+$light-pink: #fcb8d2;
+
+// purple
+$purple: #9d7fe3;
+$light-purple: #c3b6e2;
+
+// gray
+$gray: #cacaca;
+$dark-gray: #333a41;
+$light-gray: #1e232b;
+
+// blue
+$light-blue: #d2e2fa;
+
+// gradation
+$gradient-pink-purple: linear-gradient(125.07deg, $pink 0%, $purple 66.18%);
+
+// theme colors
+$knowledge: #007094;
+$integrity: #4787D4;
+$unity: #FFFDF3;
+$goldcoin: #E5C26C;
+$sapphire: #0D2F56;
+
+// secondary colors
+$brooklynfour: #C0DEE4;
+$yellowrose: #FFEAB5;
+
+
+/**
+ * ----------------------------------------
+ * Exports
+ * ----------------------------------------
+ */
+
+:export {
+  knowledge: $knowledge;
+  integrity: $integrity;
+  unity: $unity;
+  goldcoin: $goldcoin;
+  sapphire: $sapphire;
+  brooklynfour: $brooklynfour;
+  yellowrose: $yellowrose;
+  pink: $pink;
+  purple: $purple;
+  light-purple: $light-purple;
+  gray: $gray;
+  dark-gray: $dark-gray;
+  light-gray: $light-gray;
+  light-blue: $light-blue;
+
+}
