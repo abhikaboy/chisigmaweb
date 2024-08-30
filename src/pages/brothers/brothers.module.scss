@@ -1,3 +1,15 @@
+@import '../../theme/core.scss';
+
+
 .O1 {
     width: 100%;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.clickable:hover {
+    transform: scale(1.3);
 }

@@ -23,13 +23,9 @@ const Footer = () => {
     <div className={`footer ${scrolled ? 'solidBackground' : 'transparentBackground'}`}>
       <div>
         <ul>
-        <li><a href="https://twitter.com/julesforrest">Rush</a></li>
-    <li><a href="https://codepen.io/julesforrest">Instagram</a></li>
-    <li><a href="mailto:julesforrest@gmail.com">LinkedIn</a></li>
-    <li><a href="https://dribbble.com/julesforrest">Facebook</a></li>
-    <li><a href="https://github.com/julesforrest">Contact</a></li>
-    <li>
+    <li style={{flexDirection: "row", display: "flex", alignItems: "center"}}>
       <p><img src={images.logo} alt = 'logo'/></p>
+      <p style={{color: "white", fontSize: '0.8rem'}}>akpsi@northeastern.edu</p>
     </li>
         </ul>
       </div>

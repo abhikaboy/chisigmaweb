@@ -42,11 +42,25 @@ import coop17 from 'assets/images/coop17.png'
 import coop18 from 'assets/images/coop18.png'
 import fullLogo from 'assets/images/fullLogo.png'
 import sapphireGold from 'assets/images/sapphiregold.png'
+import email from 'assets/images/email.png'
+import linkedin from 'assets/images/linkedin.webp'
+import ak1 from 'assets/images/ak1.png'
+import right from 'assets/images/RIGHT.png'
+import left from 'assets/images/LEFT.png'
+import companies from 'assets/images/COMPANIES.webp'
+import rah from 'assets/images/RAH.png'
 
 export const images = {
+  companies,
+  rah,
+  ak1,
+  linkedin,
+  email,
   logo,
   profile,
   circleLogo,
+  right,
+  left,
   brotherBannerI,
   unityLogo,
   cscLogo,

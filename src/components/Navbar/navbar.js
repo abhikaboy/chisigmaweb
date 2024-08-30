@@ -96,9 +96,9 @@ const Navbar = () => {
               <NavLink to="/brothers" activeClassName="active" className = {`${scrolled ? 'goldText' : 'whiteText'}`}>Brothers</NavLink>
             </li>
 
-            <li>
+            {/* <li>
               <NavLink to="/" activeClassName="active" className = {`${scrolled ? 'goldText' : 'whiteText'}`}>Professional</NavLink>
-            </li>
+            </li> */}
             {/* ... other menu items ... */}
             <li>
               <NavLink to="/services" onClick={toggleDropdown} className = {`${scrolled ? 'goldText' : 'whiteText'}`}>
