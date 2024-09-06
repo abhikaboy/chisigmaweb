@@ -175,14 +175,14 @@ const tauData = [
   {
     name: 'Angelina Li',
     year: '2nd Year',
-    major: 'Business Administration',
+    major: 'Political Science',
     picture:
       'https://media.discordapp.net/attachments/227961738698555392/1278993307321761807/DSC00832.jpg?ex=66d2d2d7&is=66d18157&hm=c4166c38e53e780501e8fa05ba7c76b14611ed9c6cc8462ffb4a78ed0a6ab4b4&=&format=webp&width=482&height=857',
   },
   {
     name: 'Anjola Babalola',
     year: '2nd Year',
-    major: 'Business Administration',
+    major: 'Computer Science & Business Administration',
     picture:
       'https://media.discordapp.net/attachments/227961738698555392/1278993306939953204/DSC00736.jpg?ex=66d2d2d6&is=66d18156&hm=35f053dae617ef367a13a5213422d74ada727a5fdf8cbd66654931b36e3f7cad&=&format=webp&width=482&height=857',
   },
