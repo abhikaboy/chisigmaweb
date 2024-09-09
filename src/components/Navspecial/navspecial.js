@@ -1,70 +1,69 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
-import { images } from 'theme';
-import './navspecial.scss';
+import React, { useState, useEffect, useRef } from 'react'
+import { NavLink } from 'react-router-dom'
+import { images } from 'theme'
+import './navspecial.scss'
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [navOpen, setNavOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [logoSrc, setLogoSrc] = useState(images.unityLogo); // Initial logo
-  const [isMounted, setIsMounted] = useState(false); // New state to track mounting
-  const navRef = useRef(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [navOpen, setNavOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [logoSrc, setLogoSrc] = useState(images.unityLogo) // Initial logo
+  const [isMounted, setIsMounted] = useState(false) // New state to track mounting
+  const navRef = useRef(null)
 
   // Toggle Dropdown
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
+    setDropdownOpen(!dropdownOpen)
+  }
 
   // Handle scroll event
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50; // You can adjust this value
-      setScrolled(isScrolled);
-    };
+      const isScrolled = window.scrollY > 50 // You can adjust this value
+      setScrolled(isScrolled)
+    }
 
     // Adding scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   // Handle logo change
   useEffect(() => {
     // Skip fade effect on initial render
     if (!isMounted) {
-      setIsMounted(true);
-      setLogoSrc(scrolled ? images.logo : images.unityLogo);
-      return;
+      setIsMounted(true)
+      setLogoSrc(scrolled ? images.logo : images.unityLogo)
+      return
     }
 
     // Fade effect after initial render
-    setLogoSrc(scrolled ? images.logo : images.unityLogo);
-
-  }, [scrolled, isMounted]);
+    setLogoSrc(scrolled ? images.logo : images.unityLogo)
+  }, [scrolled, isMounted])
 
   // Close Dropdown if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
-        setDropdownOpen(false);
+        setDropdownOpen(false)
       }
-    };
+    }
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [navRef]);
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [navRef])
 
   // Toggle Navigation (Hamburger Menu)
   const toggleNav = () => {
-    setNavOpen(!navOpen);
-  };
+    setNavOpen(!navOpen)
+  }
 
   // Handle keyboard events for accessibility
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
-      toggleNav();
+      toggleNav()
     }
-  };
+  }
 
   return (
     <section className={`${scrolled ? 'navigation' : 'navigationTransparent'}`}>
@@ -72,7 +71,7 @@ const Navbar = () => {
         <div className="brand">
           <NavLink to="/">
             <img src={logoSrc} alt="LOGO" className="logo" />
-          </NavLink>      
+          </NavLink>
         </div>
         <nav ref={navRef}>
           <div
@@ -83,30 +82,55 @@ const Navbar = () => {
             role="button"
             tabIndex="0"
           >
-          <span className={navOpen ? 'active' : ''} />
+            <span className={navOpen ? 'active' : ''} />
           </div>
           <ul className={`menuItems ${navOpen ? 'show' : ''}`}>
             <li>
-              <NavLink to="/" exact activeClassName={`${scrolled ? 'goldActive' : 'blueActive'}`} className = {`${scrolled ? 'goldText' : 'whiteText'}`}>Home</NavLink>
+              <NavLink
+                to="/"
+                exact
+                activeClassName={`${scrolled ? 'goldActive' : 'blueActive'}`}
+                className={`${scrolled ? 'goldText' : 'whiteText'}`}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/rush" activeClassName="active" className = {`${scrolled ? 'goldText' : 'whiteText'}`}>Rush</NavLink>
+              <NavLink
+                to="/rush"
+                activeClassName="active"
+                className={`${scrolled ? 'goldText' : 'whiteText'}`}
+              >
+                Rush
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/brothers" activeClassName="active" className = {`${scrolled ? 'goldText' : 'whiteText'}`}>Brothers</NavLink>
+              <NavLink
+                to="/brothers"
+                activeClassName="active"
+                className={`${scrolled ? 'goldText' : 'whiteText'}`}
+              >
+                Brothers
+              </NavLink>
             </li>
 
-            <li>
+            {/* <li>
               <NavLink to="/" activeClassName="active" className = {`${scrolled ? 'goldText' : 'whiteText'}`}>Professional</NavLink>
-            </li>
+            </li> */}
             {/* ... other menu items ... */}
             <li>
-              <NavLink to="/services" onClick={toggleDropdown} className = {`${scrolled ? 'goldText' : 'whiteText'}`}>
-                Services
+              <NavLink
+                to="/Consulting"
+                onClick={toggleDropdown}
+                className={`${scrolled ? 'goldText' : 'whiteText'}`}
+              >
+                Consulting
               </NavLink>
               {dropdownOpen && (
                 <ul className="nav-dropdown">
-                  <li><NavLink to="/web-design">Web Design</NavLink></li>
+                  <li>
+                    <NavLink to="/web-design">Web Design</NavLink>
+                  </li>
                   {/* ... other dropdown items ... */}
                 </ul>
               )}
@@ -116,7 +140,7 @@ const Navbar = () => {
         </nav>
       </div>
     </section>
-  );
-};      
+  )
+}
 
-export default Navbar;
+export default Navbar

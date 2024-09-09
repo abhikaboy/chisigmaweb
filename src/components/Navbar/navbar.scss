@@ -2,7 +2,6 @@
 
 nav {
   float: right;
-  
 }
 nav ul {
   list-style: none;
@@ -19,31 +18,33 @@ nav ul li a {
   line-height: 80px;
   font-weight: 600;
   background: transparent;
-  font-size: 0.95rem;
+  transition: 'all 0.5s ease';
   text-decoration: none;
   /*
   The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
   */
 }
-.goldText{
-  color: $unity ;
-  &:hover{
-    color:$goldcoin;
+.goldText {
+  color: $unity;
+  &:hover {
+    color: $goldcoin;
   }
 }
 
-.whiteText{
-  color: $unity ;
-  &:hover{
-    color:$integrity;
+.whiteText {
+  color: $unity;
+  &:hover {
+    color: $integrity;
   }
 }
 nav ul li a:hover {
   opacity: 1;
   text-decoration: none;
-  font-size:1.1rem;
-  font-weight:900;
-  transition: color 0.5s, font-size 0.5s; text-decoration: 1.5s;
+  font-weight: 900;
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+
+  text-decoration: 1.5s;
 }
 
 nav ul li a:not(:only-child):after {
@@ -79,7 +80,7 @@ nav ul li ul li a {
 @media only screen and (max-width: 800px) {
   .nav-mobile {
     display: block;
-	z-index: 4;
+    z-index: 4;
   }
 
   nav {
@@ -130,7 +131,8 @@ nav ul li ul li a {
 #nav-toggle.active span {
   background-color: transparent;
 }
-#nav-toggle.active span:before, #nav-toggle.active span:after {
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
   top: 0;
 }
 #nav-toggle.active span:before {
@@ -165,7 +167,7 @@ nav ul li ul li a {
   width: 100%; // Ensures the navbar stretches across the full width
   height: 70px;
   z-index: 5;
-  background: rgba(0,0,0,0.1); // Makes the navbar background transparent
+  background: rgba(0, 0, 0, 0.1); // Makes the navbar background transparent
   transition: background-color 0.5s ease;
 
   backdrop-filter: blur(3px);
@@ -175,85 +177,83 @@ nav ul li ul li a {
   max-width: 1000px;
   margin: 0 auto;
   backdrop-filter: blur(2px);
-
 }
 
 /* Existing styles for .brand */
 .brand {
-	position: absolute;
-	padding-left: 20px;
-	line-height: 70px;
-	text-transform: uppercase;
-	font-size: 0.5em;
-	float: left;
-  }
-  
-  .brand a,
-  .brand a:visited {
-	color: #463f3f;
-	text-decoration: none;
-  }
-  
-  .logo {
-	width: 125px;
+  position: absolute;
+  padding-left: 20px;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 0.5em;
+  float: left;
+}
+
+.brand a,
+.brand a:visited {
+  color: #463f3f;
+  text-decoration: none;
+}
+
+.logo {
+  width: 125px;
   transition: opacity 0.3s ease-in-out;
+}
 
-  }
+.csclogo {
+  width: 50px;
+}
 
-  .csclogo{
-	width:50px;
+/* Additional media query for small viewport */
+@media (max-width: 800px) {
+  .brand {
+    left: auto;
+    right: 20px; // Position the logo towards the right
+    float: none;
+    padding-left: 0;
   }
-  
-  /* Additional media query for small viewport */
+}
+
+.menuItems {
+  display: block;
+
   @media (max-width: 800px) {
-	.brand {
-	  left: auto;
-	  right: 20px; // Position the logo towards the right
-	  float: none;
-	  padding-left: 0;
-	}
-  }
-  
-  .menuItems {
-	display: block;
-	
-	@media (max-width: 800px) { 
-	  display: none;
-	  &.show {
-		display: block;
-	  }
-	}
-  }
-
-  .logo-navigation {
-	display: flex;
-	height: 70px;
-	z-index: 5;
-	justify-content: center;
-	padding: 10px 0;
-	background-color: $sapphire;
-  
-	.logo-link {
-	  margin: 0 10px;
-	  
-	  img.nav-logo {
-		width: 50px;
-		height: auto;
-	  }
-	}
-  }
-  .logo.fade {
-    opacity: 0;
-  }
-
-  .blueActive {
-    font-weight: 900;
-    text-decoration: none;
-    color: $integrity; // Replace with your desired color
+    display: none;
+    &.show {
+      display: block;
     }
-
-  .goldActive {
-    font-weight: 900;
-    text-decoration: none;
-    color: $goldcoin; // Replace with your desired color
   }
+}
+
+.logo-navigation {
+  display: flex;
+  height: 70px;
+  z-index: 5;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: $sapphire;
+
+  .logo-link {
+    margin: 0 10px;
+
+    img.nav-logo {
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+.logo.fade {
+  opacity: 0;
+}
+
+.blueActive {
+  font-weight: 900;
+  text-decoration: none;
+  color: $integrity; // Replace with your desired color
+}
+
+.goldActive {
+  font-weight: 900;
+  text-decoration: none;
+  color: $goldcoin; // Replace with your desired color
+}

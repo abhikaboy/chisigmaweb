@@ -1,15 +1,15 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React, { Suspense } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 // import Banner from 'components/Banner'; // Import the Banner component
-import Fallback from 'components/Fallback';
+import Fallback from 'components/Fallback'
 
 // Lazy loading of pages
-const Default = React.lazy(() => import('./pages/default'));
-const Dashboard = React.lazy(() => import('./pages/dashboard'));
-const Rush = React.lazy(() => import('./pages/rush'));
-const Brothers = React.lazy(() => import('./pages/brothers'));
-
-// 
+const Default = React.lazy(() => import('./pages/default'))
+const Dashboard = React.lazy(() => import('./pages/dashboard'))
+const Rush = React.lazy(() => import('./pages/rush'))
+const Brothers = React.lazy(() => import('./pages/brothers'))
+const Consulting = React.lazy(() => import('./pages/consulting'))
+//
 function Router() {
   return (
     <BrowserRouter>
@@ -20,6 +20,9 @@ function Router() {
         <Route path="/rush">
           <Rush />
         </Route>
+        <Route path="/consulting">
+          <Consulting />
+        </Route>
         <Route path="/brothers">
           <Brothers />
         </Route>
@@ -28,11 +31,10 @@ function Router() {
         </Route>
       </Suspense>
     </BrowserRouter>
-  );
+  )
 }
 
-export default Router;
-
+export default Router
 
 /*
 import React, { Suspense, useEffect } from 'react';
@@ -132,4 +134,4 @@ export default Router;
   </Suspense>
 </BrowserRouter>
 )
-} */ 
+} */
