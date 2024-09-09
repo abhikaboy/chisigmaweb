@@ -66,15 +66,11 @@ import wilson from './headshots/pi/wilson.jpeg'
 // Omnicron Class
 
 import anne from './headshots/omni/anne.jpg'
-import arnav from './headshots/omni/arnav.jpg'
 import autumn from './headshots/omni/autumn.jpg'
 import darren from './headshots/omni/darren.jpg'
-import jacob from './headshots/omni/jacob.jpg'
 import jizelle from './headshots/omni/jizelle.jpg'
-import kellie from './headshots/omni/kellie.jpg'
 import khush from './headshots/omni/khush.jpg'
 import quill from './headshots/omni/quill.jpg'
-import sheng from './headshots/omni/sheng.jpg'
 import tanya from './headshots/omni/tanya.jpg'
 
 // Xi Class
