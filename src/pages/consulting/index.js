@@ -12,7 +12,7 @@ const Default = () => (
       <h1 style={{ marginTop: '20vh', fontSize: '3rem' }}>
         Chi Sigma Consulting
       </h1>
-      <p style={{ fontSize: '1.2rem' }}>
+      <p style={{ fontSize: '1.2rem', marginTop: '1vh' }}>
         Chi Sigma Consulting is a pro-bono consulting group dedicated to
         delivering both impactful and lasting solutions for nonprofits in the
         Greater Boston Area. Our diverse group of Northeastern University

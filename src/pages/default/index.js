@@ -131,9 +131,8 @@ const Default = () => (
                   >
                     <h4> Brotherhood </h4>
                     <p>
-                      {' '}
-                      Integrity is the foundation of our conduct: we are honest,
-                      ethical, and trustworthy.{' '}
+                      Brotherhood is the core that binds all of our brothers
+                      together by supporting each other in everything we do.
                     </p>
                   </div>
                   <div
@@ -148,9 +147,9 @@ const Default = () => (
                   >
                     <h4> Unity </h4>
                     <p>
-                      {' '}
-                      Integrity is the foundation of our conduct: we are honest,
-                      ethical, and trustworthy.{' '}
+                      Unity is the foundation of our conduct. We hope to conenct
+                      with our greater community to establish a stronger
+                      community.
                     </p>
                   </div>
                   <div
@@ -165,9 +164,8 @@ const Default = () => (
                   >
                     <h4> Integrity </h4>
                     <p>
-                      {' '}
                       Integrity is the foundation of our conduct: we are honest,
-                      ethical, and trustworthy.{' '}
+                      ethical, and trustworthy.
                     </p>
                   </div>
                   <div
@@ -182,9 +180,8 @@ const Default = () => (
                   >
                     <h4> Service </h4>
                     <p>
-                      {' '}
-                      Integrity is the foundation of our conduct: we are honest,
-                      ethical, and trustworthy.{' '}
+                      Through Service, we hope to give back to our communitiies
+                      and make our surroundings a better place.
                     </p>
                   </div>
                   <div
@@ -199,9 +196,9 @@ const Default = () => (
                   >
                     <h4> Knowledge </h4>
                     <p>
-                      {' '}
-                      Integrity is the foundation of our conduct: we are honest,
-                      ethical, and trustworthy.{' '}
+                      Our brothers are all experts in their fields. We hope to
+                      give them the opportunity to share their knowledge and
+                      experiences with the world.
                     </p>
                   </div>
                 </div>
