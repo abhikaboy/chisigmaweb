@@ -5,7 +5,14 @@ import styles from './rush.module.scss'
 /* import { images } from 'theme';
 import Newbutton from 'components/Newbutton';
 import Card from 'components/Card'; */
-const EventCard = ({ title, description, date, location, dressCode }) => (
+const EventCard = ({
+  title,
+  description,
+  date,
+  location,
+  dressCode,
+  complete,
+}) => (
   <div
     style={{
       width: '80%',
@@ -15,6 +22,7 @@ const EventCard = ({ title, description, date, location, dressCode }) => (
       boxShadow: '0px 4px 10px rgba(0,0,0,0.2)',
       padding: '2rem',
       marginTop: '1%',
+      opacity: complete ? '0.5' : '1',
     }}
   >
     <h3 style={{ textAlign: 'center', padding: '1% 0% 0% 0%' }}>{title}</h3>
@@ -158,6 +166,7 @@ const Default = () => (
           date="Tuesday, September 10th"
           location="TBA"
           dressCode="Business Casual"
+          complete
         />
         <EventCard
           title="Social Event #1"
@@ -165,6 +174,7 @@ const Default = () => (
           date="Thursday, September 12th"
           location="TBA"
           dressCode="Casual"
+          complete={false}
         />
         <EventCard
           title="Service Event"
@@ -172,6 +182,7 @@ const Default = () => (
           date="Saturday, September 14th"
           location="TBA"
           dressCode="Casual"
+          complete={false}
         />
         <EventCard
           title="Info Sesion #2 Resume Workshop"
@@ -179,6 +190,7 @@ const Default = () => (
           date="Monday, September 16th"
           location="TBA"
           dressCode="Business Casual"
+          complete={false}
         />
         <EventCard
           title="Social Event #2"
@@ -186,6 +198,7 @@ const Default = () => (
           date="Tuesday, September 17th"
           location="TBA"
           dressCode="Casual"
+          complete={false}
         />
         <EventCard
           title="Co-op Panel"
@@ -193,6 +206,7 @@ const Default = () => (
           date="Thursday, September 19th"
           location="TBA"
           dressCode="Business Casual"
+          complete={false}
         />
         <EventCard
           title="Applications Due"
@@ -200,6 +214,7 @@ const Default = () => (
           date="Friday, September 20th"
           location="TBA"
           dressCode="Casual"
+          complete={false}
         />
         <EventCard
           title="Invitational Event"
@@ -207,6 +222,7 @@ const Default = () => (
           date="Sunday, September 22nd"
           location="TBA"
           dressCode="Business Professional"
+          complete={false}
         />
       </div>
     </div>

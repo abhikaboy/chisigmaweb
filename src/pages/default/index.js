@@ -20,7 +20,7 @@ const Default = () => (
         >
           <div className={styles.bannerText}>
             <h1 className={styles.shadow}>ALPHA KAPPA PSI</h1>
-            <h4>
+            <h4 className={styles.subText}>
               We are the premier Business Fraternity
               <div className={styles.animatedText}>
                 <div className={styles.first}>
@@ -42,10 +42,16 @@ const Default = () => (
             <div className={styles.buttonPosition}>
               <Newbutton
                 text="RUSH 2024"
-                to="/rush"
+                onClick={() => (window.location.href = './rush')}
+                href="./rush"
                 className="shrink-border"
               />
-              <Newbutton text="Chi Sigma" to="/" className="shrink-border" />
+              <Newbutton
+                text="Consulting"
+                onClick={() => (window.location.href = './consulting')}
+                href="./consulting"
+                className="shrink-border"
+              />
             </div>
             <div />
           </div>
@@ -70,7 +76,7 @@ const Default = () => (
     <img src={images.sapphireGold} alt='gemstone'/> */}
           </div>
           <div style={{ padding: '30vh 5vw 30vh 6vh' }}>
-            <h1 style={{ lineHeight: '6rem', fontSize: '6rem' }}>
+            <h1 style={{ fontSize: '5rem' }} className={styles.bigType}>
               WE ARE THE PREMIER DEVELOPER OF PRINCIPLED BUSINESS LEADERS
             </h1>
             <p style={{ marginTop: '2rem', fontSize: '1.3rem', width: '70%' }}>
@@ -89,9 +95,9 @@ const Default = () => (
           >
             <ParallaxBanner
               style={{
-                aspectRatio: '2.25/1',
                 boxShadow: 'inset 10px 10px 10px rgba(0,0,0,1)',
               }}
+              className={styles.parallaxBanner}
             >
               <ParallaxBannerLayer speed={40}>
                 <div
@@ -107,8 +113,9 @@ const Default = () => (
               </ParallaxBannerLayer>
 
               <ParallaxBannerLayer speed={0.2} style={{ padding: '5% 0%' }}>
-                <h3 style={{ color: '#fff' }}> Values </h3>
+                <h3 style={{ color: '#fff', marginBottom: '5%' }}> Values </h3>
                 <div
+                  className={styles.valueContainer}
                   style={{
                     textAlign: 'center',
                     flexDirection: 'row',
@@ -116,35 +123,16 @@ const Default = () => (
                     justifyContent: 'space-around',
                     display: 'flex',
                     flexWrap: 'wrap',
-                    margin: '2% 10%',
                   }}
                 >
-                  <div
-                    style={{
-                      width: '27%',
-                      height: '100%',
-                      backgroundColor: 'white',
-                      borderRadius: '5px',
-                      padding: '2rem',
-                      boxShadow: '0px 4px 10px rgba(0,0,0,0.2)',
-                    }}
-                  >
+                  <div className={styles.valueCard}>
                     <h4> Brotherhood </h4>
                     <p>
                       Brotherhood is the core that binds all of our brothers
                       together by supporting each other in everything we do.
                     </p>
                   </div>
-                  <div
-                    style={{
-                      width: '27%',
-                      height: '100%',
-                      backgroundColor: 'white',
-                      borderRadius: '5px',
-                      padding: '2rem',
-                      boxShadow: '0px 4px 10px rgba(0,0,0,0.2)',
-                    }}
-                  >
+                  <div className={styles.valueCard}>
                     <h4> Unity </h4>
                     <p>
                       Unity is the foundation of our conduct. We hope to conenct
@@ -152,48 +140,21 @@ const Default = () => (
                       community.
                     </p>
                   </div>
-                  <div
-                    style={{
-                      width: '27%',
-                      height: '100%',
-                      backgroundColor: 'white',
-                      borderRadius: '5px',
-                      padding: '2rem',
-                      boxShadow: '0px 4px 10px rgba(0,0,0,0.2)',
-                    }}
-                  >
+                  <div className={styles.valueCard}>
                     <h4> Integrity </h4>
                     <p>
                       Integrity is the foundation of our conduct: we are honest,
                       ethical, and trustworthy.
                     </p>
                   </div>
-                  <div
-                    style={{
-                      width: '27%',
-                      height: '100%',
-                      backgroundColor: 'white',
-                      borderRadius: '5px',
-                      padding: '2rem',
-                      boxShadow: '0px 4px 10px rgba(0,0,0,0.2)',
-                    }}
-                  >
+                  <div className={styles.valueCard}>
                     <h4> Service </h4>
                     <p>
                       Through Service, we hope to give back to our communitiies
                       and make our surroundings a better place.
                     </p>
                   </div>
-                  <div
-                    style={{
-                      width: '27%',
-                      height: '100%',
-                      backgroundColor: 'white',
-                      borderRadius: '5px',
-                      padding: '2rem',
-                      boxShadow: '0px 4px 10px rgba(0,0,0,0.2)',
-                    }}
-                  >
+                  <div className={styles.valueCard}>
                     <h4> Knowledge </h4>
                     <p>
                       Our brothers are all experts in their fields. We hope to
@@ -222,6 +183,7 @@ const Default = () => (
               src={images.companies}
               alt="companies"
               style={{ width: '50%', justifySelf: 'center', height: 'auto' }}
+              className={styles.companies}
             />
             <p style={{ marginTop: '20px' }}>... and so many more</p>
           </div>

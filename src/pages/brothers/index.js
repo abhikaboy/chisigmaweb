@@ -34,10 +34,10 @@ const ClassSection = ({ className, data }) => (
     >
       {data.map((person) => (
         <div
+          className={styles.classCard}
           style={{
             display: 'flex',
             alignItems: 'center',
-            width: '21%',
             marginTop: '2rem',
             marginRight: '2rem',
           }}
@@ -111,28 +111,44 @@ const Default = () => (
     <Navbar />
     {/* Landing */}
     <div style={{ height: '100vh', width: '100%' }}>
-      <h2
-        style={{
-          color: '#003366',
-          fontSize: '3rem',
-          textAlign: 'center',
-          verticalAlign: 'middle',
-          marginTop: '20%',
-        }}
-      >
-        Brother Directory
-      </h2>
-      <p style={{ textAlign: 'center' }}>Meet all of our current brothers.</p>
-      <img
-        src={images.right}
-        alt="fullLogo"
-        style={{ width: '20%', top: '15%', position: 'absolute', right: '10%' }}
-      />
-      <img
-        src={images.left}
-        alt="fullLogo"
-        style={{ width: '30%', top: '12%', position: 'absolute', left: '10%' }}
-      />
+      <div className={styles.sectionTitle}>
+        <h2
+          style={{
+            color: '#003366',
+            fontSize: '3rem',
+            textAlign: 'center',
+            verticalAlign: 'middle',
+            marginTop: '20%',
+          }}
+        >
+          Brother Directory
+        </h2>
+        <p style={{ textAlign: 'center' }}>Meet all of our current brothers.</p>
+      </div>
+      <div className={styles.pictures}>
+        <img
+          src={images.right}
+          alt="fullLogo"
+          style={{
+            width: '20%',
+            top: '15%',
+            position: 'absolute',
+            right: '10%',
+          }}
+          className={styles.picture}
+        />
+        <img
+          src={images.left}
+          alt="fullLogo"
+          className={styles.pictures}
+          style={{
+            width: '30%',
+            top: '12%',
+            position: 'absolute',
+            left: '10%',
+          }}
+        />
+      </div>
     </div>
     <ClassSection className="Tau Class" data={tauData} />
     <ClassSection className="Sigma Class" data={sigmaData} />
