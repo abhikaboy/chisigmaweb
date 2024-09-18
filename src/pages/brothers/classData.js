@@ -10,18 +10,18 @@ import fernando from './headshots/tau/fernando.jpg'
 import lissette from './headshots/tau/lissette.jpg'
 import max from './headshots/tau/max.jpg'
 import sam from './headshots/tau/sam.jpg'
-import senna from './headshots/tau/senna.jpg'
+import senna from './headshots/tau/senna.png'
 import tommy from './headshots/tau/tommy.jpg'
-import veronica from './headshots/tau/veronica.jpg'
-import vy from './headshots/tau/vy.jpg'
+import veronica from './headshots/tau/veronica.png'
+import vy from './headshots/tau/vy.png'
 import yulan from './headshots/tau/yulan.jpg'
 
 // Sigma Class
 import emi from './headshots/sigma/emi.JPG'
-import rebecca from './headshots/sigma/rebecca.JPG'
+import rebecca from './headshots/sigma/rebecca.png'
 import gianna from './headshots/sigma/gianna.JPG'
 import bryce from './headshots/sigma/bryce.JPG'
-import abhik from './headshots/sigma/abhik.JPG'
+import abhik from './headshots/sigma/abhik.PNG'
 import makena from './headshots/sigma/makena.JPG'
 import lisa from './headshots/sigma/lisa.JPG'
 import liz from './headshots/sigma/liz.JPG'
@@ -136,8 +136,8 @@ export const tauData = [
   },
   {
     name: 'Fernando de Roda',
-    year: '2nd Year',
-    major: 'Internaional Business',
+    year: '4th Year',
+    major: 'International Business',
     picture: fernando,
     linkedin: 'https://www.linkedin.com/in/fernandoderoda/',
     email: '',
