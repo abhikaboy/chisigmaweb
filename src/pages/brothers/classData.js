@@ -70,8 +70,8 @@ import autumn from './headshots/omni/autumn.jpg'
 import darren from './headshots/omni/darren.jpg'
 import jizelle from './headshots/omni/jizelle.jpg'
 import khush from './headshots/omni/khush.jpg'
-import quill from './headshots/omni/quill.jpg'
-import tanya from './headshots/omni/tanya.jpg'
+import quill from './headshots/omni/quill.png'
+import tanya from './headshots/omni/tanya.png'
 
 // Xi Class
 import ethan from './headshots/xi/ethan.png'
