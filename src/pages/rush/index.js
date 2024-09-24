@@ -174,7 +174,7 @@ const Default = () => (
           date="Thursday, September 12th"
           location="TBA"
           dressCode="Casual"
-          complete={false}
+          complete
         />
         <EventCard
           title="Service Event"
@@ -182,7 +182,7 @@ const Default = () => (
           date="Saturday, September 14th"
           location="TBA"
           dressCode="Casual"
-          complete={false}
+          complete
         />
         <EventCard
           title="Info Sesion #2 Resume Workshop"
@@ -190,7 +190,7 @@ const Default = () => (
           date="Monday, September 16th"
           location="TBA"
           dressCode="Business Casual"
-          complete={false}
+          complete
         />
         <EventCard
           title="Social Event #2"
@@ -198,15 +198,15 @@ const Default = () => (
           date="Tuesday, September 17th"
           location="TBA"
           dressCode="Casual"
-          complete={false}
+          complete
         />
         <EventCard
           title="Co-op Panel"
-          description="Learn about our brother's professional experiences and get the opportunitiy to ask questions to learn first-hand."
+          description="Learn about our brothers' professional experiences and get the opportunitiy to ask questions to learn first-hand."
           date="Thursday, September 19th"
           location="TBA"
           dressCode="Business Casual"
-          complete={false}
+          complete
         />
         <EventCard
           title="Applications Due"

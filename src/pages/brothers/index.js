@@ -3,7 +3,15 @@ import { images } from 'theme'
 import Footer from 'components/Footer'
 import Navbar from 'components/Navbar'
 import styles from './brothers.module.scss'
-import { tauData, sigmaData, rhoData, piData, omnicronData } from './classData'
+import {
+  tauData,
+  sigmaData,
+  rhoData,
+  piData,
+  omnicronData,
+  xiData,
+  nuData,
+} from './classData'
 
 const ClassSection = ({ className, data }) => (
   <div style={{ padding: '2rem' }}>
@@ -155,6 +163,8 @@ const Default = () => (
     <ClassSection className="Rho Class" data={rhoData} />
     <ClassSection className="Pi Class" data={piData} />
     <ClassSection className="Omnicron Class" data={omnicronData} />
+    <ClassSection className="Xi Class" data={xiData} />
+    <ClassSection className="Nu Class" data={nuData} />
     <div style={{ padding: '10%' }} />
     <Footer />
   </html>

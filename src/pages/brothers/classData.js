@@ -74,8 +74,11 @@ import quill from './headshots/omni/quill.jpg'
 import tanya from './headshots/omni/tanya.jpg'
 
 // Xi Class
-
+import ethan from './headshots/xi/ethan.png'
+import ault from './headshots/xi/michael.png'
 // Nu Class
+import annika from './headshots/nu/annika.jpg'
+import kaylah from './headshots/nu/Kaylah.jpg'
 
 export const tauData = [
   {
@@ -337,7 +340,7 @@ export const rhoData = [
   },
   {
     name: `Diana Wang`,
-    year: '3rd Year',
+    year: '4th Year',
     major: 'Political Science',
     picture: diana,
     linkedin: 'https://www.linkedin.com/in/diana-wang-611205230/',
@@ -353,7 +356,7 @@ export const rhoData = [
   },
   {
     name: `Julieta Silva`,
-    year: '3rd Year',
+    year: '4th Year',
     major: 'Business Administration & Communications',
     picture: julieta,
     linkedin: 'https://www.linkedin.com/in/julieta-r-silva/',
@@ -369,7 +372,7 @@ export const rhoData = [
   },
   {
     name: `Nicholas Abbatiello`,
-    year: '3rd Year',
+    year: '4th Year',
     major: 'Communications',
     picture: nick,
     linkedin: 'https://www.linkedin.com/in/nicholasabbatiello/',
@@ -384,7 +387,7 @@ export const rhoData = [
     email: '',
   },
   {
-    name: `Ria Naryanan`,
+    name: `Ria Narayanan`,
     year: '3rd Year',
     major: 'Business Administration - Finance & Entrepreneurship',
     picture: ria,
@@ -587,6 +590,44 @@ export const omnicronData = [
     major: 'Business Administration',
     picture: tanya,
     linkedin: 'https://www.linkedin.com/in/tanyavermaa/',
+    email: '',
+  },
+]
+
+export const xiData = [
+  {
+    name: `Ethan Truong`,
+    year: '4th Year',
+    major: 'Business Administration - Finance',
+    picture: ethan,
+    linkedin: 'https://www.linkedin.com/in/ethanltruong/',
+    email: '',
+  },
+  {
+    name: `Michael Ault`,
+    year: '5th Year',
+    major: 'Computer Science & Business Administration',
+    picture: ault,
+    linkedin: 'https://www.linkedin.com/in/michael-ault-6a8118194/',
+    email: '',
+  },
+]
+
+export const nuData = [
+  {
+    name: `Annika Pederson`,
+    year: '5th Year',
+    major: 'Business Administration',
+    picture: annika,
+    linkedin: 'https://www.linkedin.com/in/annikapederson/',
+    email: '',
+  },
+  {
+    name: `Kaylah Webb`,
+    year: '5th Year',
+    major: 'Marketing & Design',
+    picture: kaylah,
+    linkedin: 'https://www.linkedin.com/in/christopher-lee-a4b1b31a0/',
     email: '',
   },
 ]

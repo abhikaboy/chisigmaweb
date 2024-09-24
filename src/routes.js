@@ -9,6 +9,7 @@ const Dashboard = React.lazy(() => import('./pages/dashboard'))
 const Rush = React.lazy(() => import('./pages/rush'))
 const Brothers = React.lazy(() => import('./pages/brothers'))
 const Consulting = React.lazy(() => import('./pages/consulting'))
+const Alumni = React.lazy(() => import('./pages/alumni'))
 //
 function Router() {
   return (
@@ -28,6 +29,9 @@ function Router() {
         </Route>
         <Route path="/dashboard">
           <Dashboard />
+        </Route>
+        <Route path="/alumni">
+          <Alumni />
         </Route>
       </Suspense>
     </BrowserRouter>

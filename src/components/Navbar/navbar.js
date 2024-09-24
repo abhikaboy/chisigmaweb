@@ -113,6 +113,15 @@ const Navbar = () => {
                 Brothers
               </NavLink>
             </li>
+            {/* <li>
+              <NavLink
+                to="/alumni"
+                activeClassName="active"
+                className={`${scrolled ? 'goldText' : 'whiteText'}`}
+              >
+                Alumni
+              </NavLink>
+            </li> */}
 
             {/* <li>
               <NavLink to="/" activeClassName="active" className = {`${scrolled ? 'goldText' : 'whiteText'}`}>Professional</NavLink>
@@ -126,14 +135,6 @@ const Navbar = () => {
               >
                 Consulting
               </NavLink>
-              {dropdownOpen && (
-                <ul className="nav-dropdown">
-                  <li>
-                    <NavLink to="/web-design">Web Design</NavLink>
-                  </li>
-                  {/* ... other dropdown items ... */}
-                </ul>
-              )}
             </li>
             {/* ... other menu items ... */}
           </ul>
