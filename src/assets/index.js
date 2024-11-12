@@ -49,6 +49,7 @@ import right from 'assets/images/RIGHT.png'
 import left from 'assets/images/LEFT.png'
 import companies from 'assets/images/COMPANIES.webp'
 import rah from 'assets/images/RAH.png'
+import search from 'assets/icons/MagGlass.png'
 
 export const images = {
   companies,
@@ -101,7 +102,8 @@ export const images = {
   daniel,
   ben,
   wilson,
-  caleb
+  caleb,
+  search,
 }
 
 export default {}

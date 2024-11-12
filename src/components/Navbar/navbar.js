@@ -113,7 +113,7 @@ const Navbar = () => {
                 Brothers
               </NavLink>
             </li>
-            {/* <li>
+            <li>
               <NavLink
                 to="/alumni"
                 activeClassName="active"
@@ -121,7 +121,7 @@ const Navbar = () => {
               >
                 Alumni
               </NavLink>
-            </li> */}
+            </li>
 
             {/* <li>
               <NavLink to="/" activeClassName="active" className = {`${scrolled ? 'goldText' : 'whiteText'}`}>Professional</NavLink>
