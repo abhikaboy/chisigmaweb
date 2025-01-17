@@ -162,9 +162,8 @@ const Default = () => (
     <ClassSection className="Sigma Class" data={sigmaData} />
     <ClassSection className="Rho Class" data={rhoData} />
     <ClassSection className="Pi Class" data={piData} />
-    <ClassSection className="Omnicron Class" data={omnicronData} />
+    <ClassSection className="Omicron Class" data={omnicronData} />
     <ClassSection className="Xi Class" data={xiData} />
-    <ClassSection className="Nu Class" data={nuData} />
     <div style={{ padding: '10%' }} />
     <Footer />
   </html>
