@@ -168,7 +168,7 @@ const Default = () => {
         <br />
         <button
           type="button"
-          onClick={() => setAuthorized(true)}
+          onClick={() => setAuthorized(password === 'mushroom')}
           style={{
             backgroundColor: '#23488F',
             color: '#fffffc',

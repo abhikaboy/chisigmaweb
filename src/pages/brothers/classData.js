@@ -430,14 +430,6 @@ export const piData = [
     email: '',
   },
   {
-    name: `Caleb Lee`,
-    year: '4th Year',
-    major: 'Business Administration',
-    picture: caleb2,
-    linkedin: 'https://www.linkedin.com/in/calebjlee2002/',
-    email: '',
-  },
-  {
     name: `Dane Kimura`,
     year: '4th Year',
     major: 'Finance & Data Science',
