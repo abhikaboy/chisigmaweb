@@ -54,7 +54,7 @@ const ClassSection = ({ className, data }) => (
             src={person.picture}
             alt={person.name}
             className={styles.brotherImage}
-            style={{ width: '45%', borderRadius: '10px' }}
+            style={{ width: window.innerWidth * 0.1, borderRadius: '10px' }}
           />
           <div style={{ paddingLeft: '1rem' }}>
             <h4
